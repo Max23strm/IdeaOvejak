@@ -15,8 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Proyecto Ecommerce de CoderHouse
         </a>
+          <h1>Proyecto Ecommerce de CoderHouse</h1>
       </header>
     </div>
   );
