@@ -3,9 +3,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem .5rem;
+    padding: .5rem .5rem;
+    z-index: 1000;
 }
 .opciones{
+    z-index: 1000;
     display: none;
     position: relative;
     flex-direction: column;
@@ -48,11 +50,16 @@ nav{
     display: flex;
     align-items: center;
 }
+.iconos a{
+    padding-right: 10px;
+}
 .iconos a, .iconos img{
     cursor: pointer;
-    padding:.3rem
+    text-decoration:none;
 }
-
+.iconos img{
+    height: 34px;
+}
 @media only screen and (min-width:834px){
     nav{
         padding: 1rem 2rem;
@@ -87,13 +94,13 @@ nav{
     .botonCerrar{
         display: none;
     }
-    .menu{
+    #menu{
         display: none;
     }
 
 }
 @media only screen and (min-width:950px){
     .iconos a:last-child{
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 1rem;
     }
 }

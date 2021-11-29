@@ -1,13 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 function App() {
 
   return (
     <div className="App">
         <NavBar/>
-      <header className="App-header">
-        <h1>Proyecto Ecommerce de CoderHouse</h1>
-      </header>
+        <ItemListContainer/>
     </div>
   );
 }
