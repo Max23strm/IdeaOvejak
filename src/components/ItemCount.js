@@ -6,8 +6,7 @@ function ItemCount({stock, initial, onAdd}) {
 
     return (
         <div className="Contador">
-                <h5>Nombre de Item</h5>
-            <section >
+                <section >
                 <button onClick={()=>cantidad<=1?setCantidad(cantidad):setCantidad(cantidad-1)}>&#45;</button>
 
                 <p>{stock<=0?"0":cantidad}</p>

@@ -1,12 +1,9 @@
 .Contador{
-    width: 15rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #EF7B45
-}
-.Contador h5{
-    padding: 0;
-    margin: .5rem 0;
+    position: relative;
+    bottom: 0px;
 }
 .Contador section{
     display: flex;
@@ -32,8 +29,10 @@
     border: none;
     font-size: 1.2rem;
     padding: .5rem 0;
+    border-radius: 0 0px 10px 10px;
 }
 .Contador .enStock{
+    border-radius: 0 0px 10px 10px;
     border: none;
     font-size: 1.2rem;
     padding: .5rem 0;

@@ -1,0 +1,44 @@
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    border:1px solid #5EB1BF;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 6px 4px 0px #5EB1BF;
+    background-color: #FCF7FF;
+}
+.tarjeta img{
+    margin: .2rem auto;
+    width: 18rem;
+    height: 21rem;
+}
+
+.detalles{
+    margin: .3rem 2rem;
+    height:100%
+}
+
+.detalles h5{
+    margin: .1rem 0;
+    color: rgb(31, 30, 30);
+}
+
+.detalles .principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.detalles .principal .precio{
+    font-size: 1.3rem;
+}
+.detalles .principal .titulo{
+    font-size: 1.7rem;
+}
+
+@media only screen and (min-width:630px){
+    .tarjeta .img{
+        width: 20rem;
+        height: 23rem;
+    }
+}

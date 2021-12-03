@@ -1,0 +1,26 @@
+
+.ItemList{
+    display: flex;
+    flex-direction: column;
+}
+.ItemList .Cargando{
+    display: flex;
+    width: 99vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    align-content: center;
+}
+@media only screen and (min-width:690px){
+    .ItemList{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width:900px){
+    .ItemList{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
