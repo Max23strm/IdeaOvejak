@@ -1,0 +1,44 @@
+.Contador{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EF7B45
+}
+.Contador h5{
+    padding: 0;
+    margin: .5rem 0;
+}
+.Contador section{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    justify-content: space-between;
+}
+.Contador section p{
+    text-align: center;
+}
+.Contador section button{
+    border: none;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+.Contador section button:hover{
+    background-color: #d8482786;
+}
+.Contador .sinStock{
+    /* background-color: black; */
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+}
+.Contador .enStock{
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    color:#042A2B;
+}
+.Contador .enStock:hover{
+    background-color: #5EB1BF;
+}
