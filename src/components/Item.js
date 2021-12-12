@@ -3,7 +3,6 @@ import ItemCount from './ItemCount'
 import '../styles/Item.css'
 
 function Item({item}) {
-    console.log(item.stock)
     return (
         <div className="tarjeta">
             <img src={item.img} alt="camiseta en venta"></img>

@@ -1,0 +1,62 @@
+.itemDetalles{
+    margin-top: 2rem;
+    outline: 1px solid red;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 5px 9px 16px rgba(0, 0, 0, 0.3)  ;
+}
+.itemDetalles .imagenDetalle{
+    width: 90vw;
+}
+
+.detallesGenerales{
+    padding: 1rem;
+}
+.itemDetalles .detallesGenerales h2,.itemDetalles .detallesGenerales h3{
+    padding: 0;
+    margin: 0;
+}
+
+.detallesMenores{
+    padding-top: .5rem;
+}
+
+.detallesMenores p{
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+.detallesMenores .descripcion{
+    padding-top: 1rem;
+    font-style: normal;
+}
+.sectionPrecio .precio{
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.sectionPrecio .detallePrecio{
+    text-align: center;
+
+}
+
+@media only screen and (min-width:600px){
+    .itemDetalles{
+        flex-direction: row;
+    }
+
+    .itemDetalles .imagenDetalle{
+        width: 40vw;
+    }
+    .detallesGenerales{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .detallesGenerales h2, .detallesGenerales h3{
+        padding-top: 1.5rem
+    }
+}

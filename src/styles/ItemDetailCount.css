@@ -1,0 +1,50 @@
+.Contador{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0px;
+}
+.Contador section{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    justify-content: space-between;
+}
+.Contador section p{
+    text-align: center;
+}
+.Contador section button{
+    border: none;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+.Contador section button:hover{
+    background-color: #d8482786;
+}
+.Contador .sinStock{
+    /* background-color: black; */
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    border-radius: 10px;
+}
+.Contador .hayStock{
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    color:#042A2B;
+    background-color: #EF7B45;
+}
+.Contador .hayStock:hover{
+    background-color: #D84727;
+}
+
+@media only screen and (min-width:600px){
+    .Contador :first-child{
+        margin-bottom: 1rem;
+    }
+}

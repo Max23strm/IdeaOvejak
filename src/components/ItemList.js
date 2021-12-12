@@ -45,7 +45,7 @@ function ItemList() {
     let promesa=new Promise((resolve, reject)=>{
         setTimeout(()=>{
         resolve(camisetas)
-        },2000)
+        },1500)
     })
 
     const resolverArreglo= async()=>{
