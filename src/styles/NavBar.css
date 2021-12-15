@@ -6,6 +6,10 @@ nav{
     padding: .5rem .5rem;
     z-index: 1000;
 }
+nav a{
+    color: #042A2B;
+    text-decoration: none;
+}
 .opciones{
     z-index: 1000;
     display: none;

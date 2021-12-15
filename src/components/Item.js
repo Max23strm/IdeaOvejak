@@ -1,8 +1,10 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom'
 import '../styles/Item.css'
 
-function Item({item}) {
+function Item({camino,item}) {
+
     return (
         <div className="tarjeta">
             <img src={item.img} alt="camiseta en venta"></img>
@@ -15,7 +17,14 @@ function Item({item}) {
                 <h5>{item.deporte}</h5>
                 <p>{item.descripción}</p>
             </section>
-            <ItemCount stock={item.stock} initial="1"/>
+            <section className="loInteresante">
+                <ItemCount stock={item.stock} initial="1"/>
+                <Link className="linkazo" to={`/item/${item.id}`}>
+                    <button className="botonazo" onClick={console.log(camino)}>
+                        Ver mas detalles..
+                    </button>
+                </Link>
+            </section>
         </div>
     )
 }

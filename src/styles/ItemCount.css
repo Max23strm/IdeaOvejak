@@ -1,43 +1,62 @@
 .Contador{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     position: relative;
     bottom: 0px;
+    margin: 1rem 0;
+    border: 1px solid #042A2B;
+    height: fit-content;
 }
 .Contador section{
+    /* align-items: center; */
     display: flex;
-    align-items: center;
-    height: 2rem;
+    /* height: 2rem; */
     justify-content: space-between;
 }
 .Contador section p{
     text-align: center;
 }
-.Contador section button{
+.Contador section .centro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Contador section .ponerQuitar:first-child{
+    border-right: 1px solid #042A2B;
+}
+.Contador section .ponerQuitar:last-child{
+    border-left: 1px solid #042A2B;
+}
+.Contador section .ponerQuitar{
     border: none;
     height: 100%;
     width: 15%;
     background-color: transparent;
     font-size: 1.2rem;
 }
-.Contador section button:hover{
+.Contador section .ponerQuitar:hover{
     background-color: #d8482786;
 }
 .Contador .sinStock{
-    /* background-color: black; */
+    background-color: gray;
+    width: inherit;
+    /* border-top: 1px solid #042A2B; */
     border: none;
     font-size: 1.2rem;
     padding: .5rem 0;
-    border-radius: 0 0px 10px 10px;
+    color: #042A2B;
 }
 .Contador .enStock{
-    border-radius: 0 0px 10px 10px;
     border: none;
+    width: inherit;
+    border-top: 1px solid #042A2B;
     font-size: 1.2rem;
     padding: .5rem 0;
     color:#042A2B;
+
 }
 .Contador .enStock:hover{
-    background-color: #5EB1BF;
+    background-color: #EF7B45;
+    border-color: #D84727
 }

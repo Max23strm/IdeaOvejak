@@ -1,12 +1,11 @@
 import React  from 'react'
 import '../styles/ItemListContainer.css'
 import ItemList from './ItemList'
-function ItemListContainer({datos}) {
-
+function ItemListContainer({data,filtro}) {
 
     return (
         <div>
-            <ItemList datos={datos}/>
+            <ItemList data={data} filtro={filtro}/>
         </div>
     )
 }

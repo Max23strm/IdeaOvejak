@@ -3,11 +3,12 @@ import ItemDetailCount from './ItemDetailCount'
 import '../styles/ItemDetail.css'
 import ProductGalery from './ProductGalery';
 
-function ItemDetail( {item}) {
+function ItemDetail({item}) {
+    console.log(item.producto.img)
     return (
         <div className="itemDetalles">
             <section className="galeriaContenedor">
-                <ProductGalery elementos={item.imagenes}/>
+                <ProductGalery elementos={item.producto.img}/>
             </section>
 
             <section className="detallesGenerales">
@@ -17,16 +18,16 @@ function ItemDetail( {item}) {
 
             </section>
                 <section className="detallesMenores">
-                    <p>Deporte: <a href={item.deporte}>{item.deporte}</a></p>
-                    <p>Torneo:  <a href={item.torneo}>{item.torneo}</a></p>
-                    <p>Pais:  <a href={item.pais}>{item.pais}</a></p>
-                    <p className="descripcion">{item.descripción}</p>
+                    <p>Deporte: <a href={item.producto.deporte}>{item.producto.deporte}</a></p>
+                    <p>Torneo:  <a href={item.producto.torneo}>{item.producto.torneo}</a></p>
+                    <p>Pais:  <a href={item.producto.pais}>{item.producto.pais}</a></p>
+                    <p className="descripcion">{item.producto.descripción}</p>
                 </section>
                 <section className="sectionPrecio">
-                    <h6 className="precio">{item.precio}</h6>
+                    <h6 className="precio">{item.producto.precio}</h6>
                     <h6 className="detallePrecio">Incluye envio dentro del área</h6>
                 </section>
-            <ItemDetailCount stock={item.stock} initial="1"/>
+            <ItemDetailCount stock={item.producto.stock} initial="1"/>
             </section>
         </div>
     )

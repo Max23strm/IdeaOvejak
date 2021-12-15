@@ -1,0 +1,21 @@
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url(../imagenes/preparando.jpg);
+    background-position: center;
+}
+.landing img{
+    width: 100vw;
+    z-index: -9;
+}
+
+.landing h1{
+    text-align: center;
+    color: white;
+    background-color: black;
+}

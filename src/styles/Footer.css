@@ -1,0 +1,17 @@
+.footer{
+    width: 100%;
+    background-color: black;
+    height: 10rem;
+    bottom: 0;
+}
+
+.footerPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+h6{
+    color: white;
+}
