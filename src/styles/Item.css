@@ -1,54 +1,62 @@
-.tarjeta{
+
+
+/* Catalogo de Itemlist */
+.catalogo{
     display: flex;
     flex-direction: column;
     border:1px solid #5EB1BF;
     margin: 1rem;
     border-radius: 10px;
-    box-shadow: 4px 6px 4px 0px #5EB1BF;
+    /* box-shadow: 4px 6px 4px 0px #5EB1BF; */
     background-color: #FCF7FF;
 }
-.tarjeta img{
-    margin: .2rem auto;
-    width: 18rem;
-    height: 21rem;
+.catalogo img{
+    margin: .4rem auto;
+    width: 16rem;
+    height: 19rem;
 }
 
-.detalles{
-    margin: .3rem 2rem;
+.catalogodetalles{
+    margin: .3rem 1rem;
     height:100%
 }
 
-.detalles h5{
+.catalogodetalles h5{
     margin: .1rem 0;
     color: rgb(31, 30, 30);
 }
 
-.detalles .principal{
+.catalogodetalles .catalogoprincipal{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.detalles .principal .precio{
+.catalogoprecio{
+    font-size: 1.1rem;
+}
+
+.catalogodetalles .catalogoprincipal .catalogotitulo h4{
     font-size: 1.3rem;
+    margin: 0;
 }
-.detalles .principal .titulo{
-    font-size: 1.7rem;
+.catalogodetalles .catalogoprincipal .catalogotitulo h5{
+    font-weight: normal;
 }
-.loInteresante{
+.catalogoloInteresante{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.linkazo{
+.catalogolinkazo{
     margin-left: .5rem;
     width: 90%;
     height: 100%;
     border-radius: 20px;
     padding: 1rem 0;
 }
-.botonazo{
+.catalogobotonazo{
     padding: 1.5rem;
     background-color: #5EB1BF;
     height: 100%;
@@ -60,8 +68,32 @@
 }
 
 @media only screen and (min-width:630px){
-    .tarjeta .img{
-        width: 20rem;
-        height: 23rem;
+    .catalogo img{
+        width: 18rem;
+        height: 21rem;
     }
+}
+
+
+/* Home, novedades */
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin : 0 1rem
+}
+
+.home img{
+    width: 300px;
+    height: 340px;
+}
+.homeprincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.homeloInteresante{
+    display: none;
 }

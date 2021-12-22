@@ -2,8 +2,6 @@ import React from 'react'
 
 
 function ProductGalery(elementos) {
-  //  console.log(elementos)
-  console.log(elementos)
     return (
         <div className="galeria">
             <section><img src={elementos.elementos}

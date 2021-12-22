@@ -1,0 +1,5 @@
+.viewCatalogo{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 1rem;
+}

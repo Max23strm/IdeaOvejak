@@ -7,14 +7,12 @@ function Producto ({definido,data}) {
     
     let parametros=useParams()
     let datos
-    console.log(definido)
     data? data.map((camisetas)=>(
         camisetas.id===parametros.id? datos=camisetas:null
     )): datos={definido}
 
-    console.log(datos)
     return (
-        <ItemDetailContainer producto={datos}/>
+        <ItemDetailContainer item={datos}/>
     )
 }
 

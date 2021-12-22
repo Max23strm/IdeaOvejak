@@ -7,7 +7,7 @@ import '../styles/NavBar.css'
 import{Link, NavLink} from 'react-router-dom'
 
 
-function NavBar({id}) {
+function NavBar({id, carrito}) {
 
     
     return (
@@ -40,7 +40,7 @@ function NavBar({id}) {
             <section className="iconos">
                     <img id="menu" src={Menu} alt="menu" className="menu"></img> 
                     <Link to=""><img src={Usuario} alt="usuario"></img></Link>
-                    <Link to="/cart"><Carrito cantidad="0"/></Link>
+                    <Link to="/cart"><Carrito cantidad={carrito}/></Link>
             </section>
         </nav>
     )

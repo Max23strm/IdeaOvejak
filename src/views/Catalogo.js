@@ -1,11 +1,26 @@
 import React from 'react'
 import ItemListContainer from '../components/ItemListContainer'
 import { useParams } from 'react-router-dom'
+import FiltroItems from '../components/FiltroItems'
+import '../styles/Catalogo.css'
 
 function Catalogo({data}) {
-    let params=useParams()
+    let mostrando=[];
+    let elFiltro=useParams().id;
+    //console.log(mostrando)
+
+    let filtrar=()=>(data? data.map((camiseta)=>(
+        elFiltro===camiseta.deporte || elFiltro===camiseta.indumentaria?
+        mostrando.push({camiseta}):null))
+        :null)
+        filtrar();
+    
     return (
-        <ItemListContainer data={data} filtro={params} />
+        <section className='viewCatalogo'>
+            <FiltroItems data={mostrando}/>
+
+            <ItemListContainer data={mostrando} filtro={elFiltro} />
+        </section>
     )
 }
 

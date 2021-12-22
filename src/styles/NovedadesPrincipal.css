@@ -1,0 +1,16 @@
+.principalNovedades{
+    margin: 5rem 0;
+}
+.principalNovedades h2{
+    text-align: center;
+}
+.principalNovedades .principalGaleria{
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    /* justify-content: center; */
+    overflow-x: scroll;
+    scrollbar-color:#D84727 ;
+    margin:0 auto;
+    scroll-behavior: auto;
+}

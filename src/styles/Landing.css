@@ -1,21 +1,63 @@
-.landing{
-    display: flex;
-    align-items: center;
+.swiper-slide{
+    align-content:center;
     justify-content: center;
-    position:fixed;
-    height: 100%;
-    width: 100vw;
-    overflow-x: hidden;
-    background-image: url(../imagenes/preparando.jpg);
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
 }
-.landing img{
+.imagenCarruselPrincipal{
+    object-fit: cover;
     width: 100vw;
-    z-index: -9;
+
 }
 
-.landing h1{
+.deportesPrincipal{
+    margin: 5rem 0;
+}
+.deportesPrincipal h2{
     text-align: center;
-    color: white;
-    background-color: black;
+}
+.deportesImagenes{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.deportesImagenes a{
+    width: 22rem;
+    height: 34rem;
+    margin: 0 3rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.deportesImagenes a h3{
+    position: absolute;
+    text-decoration: none;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: lighter;
+    top: 2rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.deportesImagenes a img{
+    width: 22rem;
+    height: 34rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.deportesImagenes a:hover img
+{
+    filter: grayscale(1);
+    filter:brightness(0.4);
+    transition: 100ms;
+}
+.deportesImagenes a:hover h3{
+    transition: 100ms;
+    color:#FCF7FF;
+
 }

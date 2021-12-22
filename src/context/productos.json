@@ -1,0 +1,194 @@
+[{
+    "img":"https://us03-imgcdn.ymcart.com/50018/2021/08/31/9/3/93e35cc274a3759a.jpeg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp",
+    "id":"1",
+    "equipo":"Inter",
+    "tipo":"Home",
+    "torneo":"Serie A",
+    "deporte":"Futbol",
+    "precio":"$25 USD",
+    "stock":2,
+    "descripción":"Camiseta titular del Inter. Incluye personalización y envío dentro del país",
+    "indumentaria": "Camisetas",
+    "popular":true,
+    "color":[
+        "blue"
+    ]
+    },
+    {
+        "img":"https://us03-imgcdn.ymcart.com/50018/2021/11/19/b/b/bbd0c410ab8819a9.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp",
+        "id":"2",
+        "equipo":"Leinster",
+        "tipo":"Home",
+        "torneo":"Guinnes Premiership",
+        "deporte":"Rugby",
+        "precio":"$30 USD",
+        "stock":10,
+        "descripción":"Camiseta titular del club Leinster Rugby. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "blue","gold"
+        ]
+        
+    },
+    {
+        "img":"https://www.lovellsoccer.co.uk/products/products_new/463894.jpg",
+        "id":"3",
+        "equipo":"Tottenham",
+        "tipo":"Home",
+        "torneo":"Premier League",
+        "deporte":"Futbol",
+        "precio":"$25 USD",
+        "stock":3,
+        "descripción":"Camiseta titular del Tottenham Hotspur. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "white"
+        ]
+    },
+    {
+        "img":"https://www.lovellsoccer.co.uk/products/large/944497.jpg",
+        "id":"4",
+        "equipo":"Tottenham",
+        "tipo":"Third",
+        "torneo":"Premier League",
+        "deporte":"Futbol",
+        "precio":"$25 USD",
+        "stock":0,
+        "descripción":"Tercer camiseta del Tottenham Hotspur. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "purple","gray"
+        ]
+    },
+    {
+        "img":"https://www.lovellsoccer.co.uk/products/large/563320.jpg",
+        "id":"5",
+        "equipo":"Chelsea",
+        "tipo":"Home",
+        "torneo":"Premier League",
+        "deporte":"Futbol",
+        "precio":"$25 USD",
+        "stock":2,
+        "descripción":"Camiseta titular del Chelsea. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":false,
+        "color":[
+            "blue","yellow"
+        ]
+    },
+    {
+        "img":"https://www.lovell-rugby.co.uk/products/large/594067.jpg",
+        "id":"6",
+        "equipo":"Escocia",
+        "tipo":"Home",
+        "torneo":"Internacional",
+        "deporte":"Rugby",
+        "precio":"$25 USD",
+        "stock":4,
+        "descripción":"Camiseta titular del seleccionado Escoces. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "blue","multi"
+        ]
+    },
+    {
+        "img":"https://www.lovell-rugby.co.uk/products/large/1017259.jpg",
+        "id":"7",
+        "equipo":"Crusaders",
+        "tipo":"Home",
+        "torneo":"Super Rugby",
+        "deporte":"Rugby",
+        "precio":"$30 USD",
+        "stock":7,
+        "descripción":"Camiseta titular de Crusaders. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":false,
+        "color":[
+            "black","red"
+        ]
+    },
+    {
+        "img":"https://www.lovell-rugby.co.uk/products/large/1017238.jpg",
+        "id":"8",
+        "equipo":"Crusaders",
+        "tipo":"Away",
+        "torneo":"Super Rugby",
+        "deporte":"Rugby",
+        "precio":"$30 USD",
+        "stock":2,
+        "descripción":"Camiseta visitante de Crusaders. Incluye personalización y envío dentro del país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "white","black"
+        ]
+    },
+    {
+        "img":"https://www.lovellsoccer.co.uk/products/large/134480.jpg",
+        "id":"9",
+        "equipo":null,
+        "tipo":null,
+        "torneo":null,
+        "deporte":"Lifestyle",
+        "precio":"$25 USD",
+        "stock":2,
+        "descripción":"Conjunto deportivo de la marca Adidas, envio incluido a todo el país",
+        "indumentaria": "Conjunto",
+        "popular":false,
+        "color":[
+            "black"
+        ]
+    },
+    {
+        "img":"https://www.lovellsoccer.co.uk/products/large/45070.jpg",
+        "id":"10",
+        "equipo":null,
+        "tipo":null,
+        "torneo":null,
+        "deporte":"Lifestyle",
+        "precio":"$10 USD",
+        "stock":2,
+        "descripción":"Gorra marca adidas. Envio incluido a todo el país",
+        "indumentaria": "Accesorios",
+        "popular":false,
+        "color":[
+            "black"
+        ]
+    },
+    {
+        "img":"https://cdn.shopify.com/s/files/1/0303/2871/7371/products/DB4034-010-PHSFH001_1200x.jpg?v=1637056541",
+        "id":"11",
+        "equipo":"Miami Heats",
+        "tipo":"Home",
+        "torneo":"NBA",
+        "deporte":"Basquetball",
+        "precio":"$30 USD",
+        "stock":5,
+        "descripción":"Camiseta marca Nike de Miami Heats. Envio incluido a todo el país",
+        "indumentaria": "Camisetas",
+        "popular":true,
+        "color":[
+            "black","multi"
+        ]
+    },
+    {
+        "img":"https://cdn.shopify.com/s/files/1/0303/2871/7371/products/DB4117-100-PHSFH001_1200x.jpg?v=1636467818",
+        "id":"12",
+        "equipo":"Celtics",
+        "tipo":"Home",
+        "torneo":"NBA",
+        "deporte":"Basquetball",
+        "precio":"$30 USD",
+        "stock":5,
+        "descripción":"Camiseta marca Nike de Celtics. Envio incluido a todo el país",
+        "indumentaria": "Camisetas",
+        "popular":false,
+        "color":[
+            "green","white"
+        ]
+    }
+]
