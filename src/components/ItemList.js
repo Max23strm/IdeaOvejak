@@ -4,7 +4,7 @@ import Producto from '../views/Producto'
 
 import Item from './Item'
 
-function ItemList({mostrando, filtro, onAdd}) {
+function ItemList({mostrando, filtro}) {
     const camisetita=[]
     mostrando.map((item)=>(camisetita.push(item.camiseta)))
     

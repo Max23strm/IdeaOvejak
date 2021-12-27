@@ -1,14 +1,17 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Usuario from '../imagenes/usuario.png'
 import Menu from '../imagenes/menu.png'
 import Cerrar from '../imagenes/cerrar.png'
 import Carrito from '../UI/Carrito'
 import '../styles/NavBar.css'
 import{Link, NavLink} from 'react-router-dom'
+import { CarritoConsumer } from '../context/CarritoProvider'
 
 
-function NavBar({id, carrito}) {
 
+function NavBar(id) {
+    
+    const{carrito}=CarritoConsumer();
     
     return (
         <nav>
@@ -40,7 +43,7 @@ function NavBar({id, carrito}) {
             <section className="iconos">
                     <img id="menu" src={Menu} alt="menu" className="menu"></img> 
                     <Link to=""><img src={Usuario} alt="usuario"></img></Link>
-                    <Link to="/cart"><Carrito cantidad={carrito}/></Link>
+                    <Link to="/cart"><Carrito cantidad={carrito.length}/></Link>
             </section>
         </nav>
     )

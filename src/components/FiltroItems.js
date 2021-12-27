@@ -4,7 +4,7 @@ function FiltroItems(data) {
     let objetos=data.data
     const indumentaria=[]
     const tipo=[]
-    console.log(indumentaria)
+    //console.log(indumentaria)
     return (
         <section className='filtro'>
             {objetos.map((camiseta)=>(

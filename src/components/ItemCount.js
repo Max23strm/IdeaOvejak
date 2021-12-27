@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import '../styles/ItemCount.css'
 
-function ItemCount({stock, initial, onAdd, clase, clase2, item}) {
+function ItemCount({stock, initial, onAdd, clase, clase2, item, elimi}) {
     const[cantidad, setCantidad]= useState(parseInt(initial))
     return (
         <div className={`${clase}Contador ${clase2}`}>
@@ -17,12 +17,13 @@ function ItemCount({stock, initial, onAdd, clase, clase2, item}) {
                     <button className={stock<=0?
                         `${clase}sinStock` :`${clase}enStock`}
                         disabled={stock<=0?true:false}
-                        onClick={()=>onAdd(item)}>
+                        onClick={()=>onAdd(item, cantidad,item.id)}>
                             {stock<=0?"No disponible":"Agregar al carrito"}
                     </button>
-                
+                    <button onClick={()=>elimi(item.id)}>
+                        borrar
+                    </button>
                 </section>
-
                 <button  className={`${clase}ponerQuitar`}
                 onClick={()=>cantidad<stock?setCantidad(cantidad+1):setCantidad(cantidad)}>
                     &#43;

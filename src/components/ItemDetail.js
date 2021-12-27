@@ -3,41 +3,35 @@ import '../styles/ItemDetail.css'
 import ProductGalery from './ProductGalery';
 import { useState } from 'react';
 import TerminarCompra from './TerminarCompra';
+import {CarritoConsumer} from '../context/CarritoProvider';
 
-function ItemDetail(item) {
+function ItemDetail({item}) {
     const [comprado, setComprado]= useState("visible");
     const [terminar, setTerminar]= useState("invisible"); 
-    let producto=item.item.item
-
-    function onAdd (producto) {
-        setComprado("invisible")
-        setTerminar("flex")
-    }
-
-
+    const {addItem, removeItem, isInCart, deleteAll}=CarritoConsumer();
     return (
         <div className="itemDetalles">
             <section className="galeriaContenedor">
-                <ProductGalery elementos={producto.img}/>
+                <ProductGalery elementos={item.img}/>
             </section>
 
             <section className="detallesGenerales">
                 <section className="titulo">
-                <h2>{producto.equipo}</h2>
-                <h3>{producto.tipo}</h3>
+                <h2>{item.equipo}</h2>
+                <h3>{item.tipo}</h3>
 
             </section>
                 <section className="detallesMenores">
-                    <p>Deporte: <a href={producto.deporte}>{item.deporte}</a></p>
-                    <p>Torneo:  <a href={producto.torneo}>{item.torneo}</a></p>
-                    <p>Pais:  <a href={producto.pais}>{producto.pais}</a></p>
-                    <p className="descripcion">{producto.descripción}</p>
+                    <p>Deporte: <a href={item.deporte}>{item.deporte}</a></p>
+                    <p>Torneo:  <a href={item.torneo}>{item.torneo}</a></p>
+                    <p>Pais:  <a href={item.pais}>{item.pais}</a></p>
+                    <p className="descripcion">{item.descripción}</p>
                 </section>
                 <section className="sectionPrecio">
-                    <h6 className="precio">{producto.precio}</h6>
+                    <h6 className="precio">{item.precio}</h6>
                     <h6 className="detallePrecio">Incluye envio dentro del área</h6>
                 </section>
-            <ItemCount stock={producto.stock} item={producto} clase="detalle" clase2={comprado} onAdd={onAdd} initial="1"/>
+            <ItemCount stock={item.stock} item={item} clase="detalle" clase2={comprado} onAdd={addItem} elimi={removeItem} borrarTod={deleteAll} encontrar={isInCart} initial="1"/>
             <TerminarCompra clase={terminar}/>
             </section>
         </div>
