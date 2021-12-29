@@ -1,14 +1,12 @@
 import ItemCount from './ItemCount'
 import '../styles/ItemDetail.css'
 import ProductGalery from './ProductGalery';
-import { useState } from 'react';
 import TerminarCompra from './TerminarCompra';
 import {CarritoConsumer} from '../context/CarritoProvider';
 
 function ItemDetail({item}) {
-    const [comprado, setComprado]= useState("visible");
-    const [terminar, setTerminar]= useState("invisible"); 
-    const {addItem, removeItem, isInCart, deleteAll}=CarritoConsumer();
+    console.log(item)
+    const {addItem, terminar}=CarritoConsumer();
     return (
         <div className="itemDetalles">
             <section className="galeriaContenedor">
@@ -31,7 +29,7 @@ function ItemDetail({item}) {
                     <h6 className="precio">{item.precio}</h6>
                     <h6 className="detallePrecio">Incluye envio dentro del área</h6>
                 </section>
-            <ItemCount stock={item.stock} item={item} clase="detalle" clase2={comprado} onAdd={addItem} elimi={removeItem} borrarTod={deleteAll} encontrar={isInCart} initial="1"/>
+            <ItemCount stock={item.stock} item={item} clase="detalle" onAdd={addItem} initial="1"/>
             <TerminarCompra clase={terminar}/>
             </section>
         </div>

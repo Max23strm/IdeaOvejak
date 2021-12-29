@@ -67,6 +67,13 @@
     font-size: 1.1rem;
 }
 
+.catalogoDetallesCarro,.catalogoAgregarQuitar, .catalogoPrecios{
+    display: none;
+}
+
+
+
+
 @media only screen and (min-width:630px){
     .catalogo img{
         width: 18rem;
@@ -96,4 +103,96 @@
 }
 .homeloInteresante{
     display: none;
+}
+
+/* ELEMENTOS DE CARRiTO */
+
+.carro{
+    border: 1px solid #5EB1BF;
+    display:flex;
+    flex-direction: row;
+    height: 17rem;
+    width: 80vw;
+    margin: 2rem 0;
+    border-radius: 10px;
+    position: relative;
+}
+.carro img{
+    width: 12rem;
+    height: 14rem;
+    border-radius: 10px;
+    margin: 1.5rem 2rem;
+}
+.carroprincipal{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.carrotitulo h4, .carrotitulo h5{
+    font-size: 1.7rem;
+    margin: .3rem 0
+}
+
+.carroItem{
+    margin-top: .3rem;
+    font-size: .7rem;
+    font-weight:400;
+    text-transform: uppercase;
+}
+
+.carroloInteresante{
+    display: none;
+}
+/* .carroDetalles{
+    border: 1px solid green;
+} */
+.carroDetallesCarro P{
+    color:black;
+    margin-top: .3rem;
+    font-size: .8rem;
+}
+.carroPrecios{
+    display: flex;
+    width: 78%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 16rem;
+    justify-content: space-between;
+}
+
+.carroPrecios p{
+    font-size: 1.1rem;
+}
+.carroPrecios p span{
+    font-size: 1.5rem;
+}
+
+.carroAgregarQuitar{
+    position: absolute;
+    right: 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid purple; */
+    height: fit-content;
+}
+
+.carroAgregarQuitar p{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.carroAgregarQuitar .botones button{
+    border: 1px solid #D84727;
+    background-color: #EF7B45;
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: 10px;
+    margin:.2rem .2rem
 }

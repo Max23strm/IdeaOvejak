@@ -1,0 +1,46 @@
+.botonesDeCompra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin: 2rem 0;
+}
+
+.botonesDeCompra p{
+    margin:0 1rem 0 2rem;
+}
+
+.botonesDeCompra p span{
+    font-size: 1.5rem;
+}
+
+.botonesDeCompra button{
+    margin: 0 1rem;
+    border:none;
+    border-radius: 10px;
+    padding: 0.7rem;
+}
+
+.botonesDeCompra .botonVaciar{
+    font-size: .7rem;
+    color: #C4C4C4;
+    font-weight: 400;
+    background-color: #042A2B;
+    border: 2px solid #042A2B;
+}
+.botonesDeCompra .botonVaciar:hover{
+    color: #D84727;
+    border-color: #D84727;
+}
+
+.botonesDeCompra .botonComprar{
+    
+    color: #042A2B;
+    font-weight: bold;
+    background-color: #5EB1BF;
+    border: 2px solid #042A2B;
+}
+.botonesDeCompra .botonComprar:hover{
+    background-color: #D84727;
+    border-color: #042A2B;
+}

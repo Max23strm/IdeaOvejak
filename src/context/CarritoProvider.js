@@ -8,9 +8,14 @@ export const CarritoConsumer= ()=>useContext(CarritoContext)
 function CarritoProvider({children}) {
 
     const [carrito, setCarrito]= useState([])
-    console.log(carrito)
+    const [comprado, setComprado]= useState("visible");
+    const [terminar, setTerminar]= useState("invisible"); 
+    const [itemTemporal, setItemTemporal]=useState([])
 
-
+    const mostrarComprado=()=>{
+        setTerminar("visible")
+        setTimeout(setTerminar("invisible"),5000)
+    }
     //FUNCION PARA ENCONTRAR ITEM
     const isInCart=(id)=>{
         var siEsta= carrito.filter(objeto=> objeto.id===id)
@@ -23,10 +28,10 @@ function CarritoProvider({children}) {
             
         }
     }
-
+    
     //FUNCION PARA AGREGAR ELEMENTO
     const addItem=(item, cantidad,itemId)=>{
-        
+        setItemTemporal([item])
         if(!carrito[0]){
             console.log("no habia nada, lo agregamos")
             item["cantidad"]=cantidad
@@ -51,26 +56,47 @@ function CarritoProvider({children}) {
                 setCarrito([...carrito, item])
                 
             }
-    
+            
         }
+        mostrarComprado()
     }
-
+    
 
     
     //FUNCION PARA REMOVER ELEMENTO
-    const removeItem=(itemId)=>{
+    const removeOneItem=(item,itemId)=>{
         for(var i = 0; i < carrito.length; i++){
             if (carrito[i].id===itemId){
                 if(carrito[i].cantidad>1){
-                    carrito[i].cantidad--
+
+                    let cantidad=carrito[i].cantidad
+                    carrito.splice(i,1)
+                    cantidad--
+                    item["cantidad"]=cantidad
+                    setCarrito([...carrito, item])
                 }else{
                     carrito.splice(i,1)
+                    if(!carrito[0]){
+                        setCarrito([])
+                    }
+
                 }
             }
         }
-        console.log(carrito)
     }
 
+    //FUNCION PARA AGREGAR UN ITEM
+    const addOneItem=(item,itemId)=>{
+        for(var i = 0; i < carrito.length; i++){
+            if (carrito[i].id===itemId){
+                let cantidad=carrito[i].cantidad
+                carrito.splice(i,1)
+                cantidad++
+                item["cantidad"]=cantidad
+                setCarrito([...carrito, item])
+                }
+        }
+    }
 
     //FUNCION PARA BORRAR TODO
     const clear=()=>{
@@ -80,7 +106,7 @@ function CarritoProvider({children}) {
 
 
     return (
-        <CarritoContext.Provider value={{carrito, addItem, removeItem, clear, isInCart}}>
+        <CarritoContext.Provider value={{carrito, addItem, removeOneItem, clear, isInCart, addOneItem, terminar,itemTemporal,setItemTemporal}}>
             {children}
         </CarritoContext.Provider>
     )

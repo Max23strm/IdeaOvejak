@@ -7,7 +7,7 @@ function TerminarCompra({clase}) {
     return (
         <section className={`agregado ${clase}`}>
             <h3>Elemento agregado al carrito</h3>
-            <Link to="/cart1"><button>Ir al carrito</button></Link>
+            <Link to="/cart"><button>Ir al carrito</button></Link>
         </section>
     )
 }

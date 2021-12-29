@@ -1,0 +1,25 @@
+.compraVacia{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.compraVacia h1{
+    font-size: 2rem;
+}
+
+.compraVacia a button{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #042A2B;
+    border-radius: 10px;
+    background-color: #D84727;
+    color:#011213;
+}
+.compraVacia a button:hover{
+    background-color: #d84e2f;
+    cursor: pointer;
+}

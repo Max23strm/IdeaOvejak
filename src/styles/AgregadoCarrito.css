@@ -1,0 +1,36 @@
+.oculto{
+    display: none;
+}
+.visible{
+    display: flex;
+}
+
+.otro{
+    position: absolute;
+    z-index: 10;
+    top:10vh;
+    right: 1vw;
+    border: 2px solid #D84727;
+    background-color: #5EB1BF;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* height: 20vh; */
+    /* width: 20vw; */
+}
+
+.otro p{
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.otro .imagenpop{
+    border-radius: 10px 10px 0 0 ;
+    /* padding: 1rem 0; */
+    /* width: 19vh; */
+    height: 200px;
+    /* height: 100%; */
+}

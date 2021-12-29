@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Usuario from '../imagenes/usuario.png'
 import Menu from '../imagenes/menu.png'
 import Cerrar from '../imagenes/cerrar.png'
@@ -43,7 +43,10 @@ function NavBar(id) {
             <section className="iconos">
                     <img id="menu" src={Menu} alt="menu" className="menu"></img> 
                     <Link to=""><img src={Usuario} alt="usuario"></img></Link>
-                    <Link to="/cart"><Carrito cantidad={carrito.length}/></Link>
+                    
+                    <Link to="/cart">
+                        <Carrito cantidad={carrito.length}/>
+                    </Link>
             </section>
         </nav>
     )
