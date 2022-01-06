@@ -104,6 +104,10 @@
 .homeloInteresante{
     display: none;
 }
+.homeDetallesCarro,.homeAgregarQuitar, .homePrecios{
+    display: none;
+}
+
 
 /* ELEMENTOS DE CARRiTO */
 

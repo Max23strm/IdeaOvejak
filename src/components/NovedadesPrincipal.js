@@ -4,7 +4,6 @@ import "../styles/NovedadesPrincipal.css"
 
 function NovedadesPrincipal(data) {
     let camisetas=data.data
-    console.log(camisetas)
     return (
         <section className='principalNovedades'>
             <h2>Los más populares</h2>

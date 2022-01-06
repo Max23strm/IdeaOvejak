@@ -29,12 +29,12 @@ function NavBar(id) {
                     </li>
                     <li className="opcionNavegacion">CATEGORIAS 
                         <ul>
-                            <li><NavLink to="/category/Camisetas">Camisetas</NavLink></li>
+                            <li><NavLink to="/category/Camiseta">Camisetas</NavLink></li>
                             <li><NavLink to="/category/Shorts">Shorts</NavLink></li>
-                            <li><NavLink to="/category/Conjuntos">Conjuntos</NavLink></li>
+                            <li><NavLink to="/category/Conjunto">Conjuntos</NavLink></li>
                             <li><NavLink to="/category/Accesorios">Accesorios</NavLink></li>
-                            <li><NavLink to="/category/Novedades">Novedades</NavLink></li>
-                            <li><NavLink to="/category/Ofertas">Ofertas</NavLink></li>
+                            {/* <li><NavLink to="/category/Novedades">Novedades</NavLink></li> */}
+                            {/* <li><NavLink to="/category/Ofertas">Ofertas</NavLink></li> */}
                         </ul>
                     </li>
                     <li className="opcionNavegacion">CONTACTO</li>

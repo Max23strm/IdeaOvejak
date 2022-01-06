@@ -15,7 +15,7 @@ function Item({camiseta, clase, onAdd, removeOneItem, addOneItem}) {
                         <h4 >{item.equipo}</h4>
                         <h5>{item.tipo}</h5>
                     </section>
-                    <p className={`${clase}Item`}>ItemId: {item.id}</p>
+                    <p className={`${clase}Item`}>${item.precio}</p>
                 </section>
                 {/* <h5>{item.torneo}</h5>
                 <h5>{item.deporte}</h5>

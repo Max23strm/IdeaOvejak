@@ -44,7 +44,7 @@ function Home({data}) {
         {/* Segunda seccion de la pagina principal */}
 
             <section className='deportesPrincipal'>
-                <h2>Deportes</h2>
+                <h2>DEPORTES</h2>
                 <section className='deportesImagenes'>
                     <Link to="/category/Futbol">
                         <img src={depoFut} className='depoImagen' alt="seccion de Futbol"/>

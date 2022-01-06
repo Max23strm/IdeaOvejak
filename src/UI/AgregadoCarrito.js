@@ -11,7 +11,6 @@ function AgregadoCarrito() {
             setItemTemporal([]) 
         }, 3000);
     }
-    console.log(itemTemporal)
     return (
         <section className={`${clase} otro` }>
             <img className="imagenpop"src={itemTemporal[0]?itemTemporal[0].img:null} alt='imagen de producto'></img>
