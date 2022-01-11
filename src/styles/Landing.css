@@ -67,10 +67,12 @@
 {
     filter: grayscale(1);
     filter:brightness(0.4);
-    transition: 100ms;
+    size: 1rem;
+    transition: all .5s 0s ease-in;
 }
 .deportesImagenes a:hover h3{
     transition: 100ms;
+    font-weight: bold;
     color:#FCF7FF;
 
 }

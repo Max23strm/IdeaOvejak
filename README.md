@@ -1,3 +1,13 @@
+# Este es un proyecto creado con React
+
+Debajo estan los detalles básicos de una aplicación creada con React. Este es el trabajo final del curso de React de CoderHouse.
+
+## Tipo de aplicación
+
+Este es un Ecommerce, en el cual se simula una tienda de indumentaria deportiva.
+Las imagenes son sacadas de otras tiendas para ayudar a visualizarla.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -23,9 +23,9 @@
 
 .botonesDeCompra .botonVaciar{
     font-size: .7rem;
-    color: #C4C4C4;
-    font-weight: 400;
-    background-color: #042A2B;
+    color: #042A2B;
+    font-weight: bold;
+    background-color: white;
     border: 2px solid #042A2B;
 }
 .botonesDeCompra .botonVaciar:hover{
@@ -35,12 +35,14 @@
 
 .botonesDeCompra .botonComprar{
     
-    color: #042A2B;
+    color: white;
     font-weight: bold;
     background-color: #5EB1BF;
+    background-color: #D84727;
     border: 2px solid #042A2B;
 }
 .botonesDeCompra .botonComprar:hover{
-    background-color: #D84727;
+    background-color: #5EB1BF;
     border-color: #042A2B;
+    cursor: pointer;
 }

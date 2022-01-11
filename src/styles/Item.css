@@ -116,10 +116,11 @@
     display:flex;
     flex-direction: row;
     height: 17rem;
-    width: 80vw;
+    width: 50vw;
     margin: 2rem 0;
     border-radius: 10px;
     position: relative;
+    background-color: white;
 }
 .carro img{
     width: 12rem;
@@ -161,11 +162,12 @@
 }
 .carroPrecios{
     display: flex;
-    width: 78%;
+    width: 65%;
     height: fit-content;
     position: absolute;
     bottom: 0;
     left: 16rem;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -193,8 +195,9 @@
 }
 
 .carroAgregarQuitar .botones button{
-    border: 1px solid #D84727;
-    background-color: #EF7B45;
+    border: 1px solid #074749;
+    background-color: #042A2B;
+    color: white;
     font-size: 1rem;
     padding: .8rem;
     border-radius: 10px;

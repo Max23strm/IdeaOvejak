@@ -1,0 +1,26 @@
+form{
+    margin-top: 2rem;
+    border:2px solid #042A2B;
+    border-radius:10px;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+form section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+form section label{
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+form section input, form section textarea{
+    border: 1px solid #042A2B;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #c4c4c4;
+}

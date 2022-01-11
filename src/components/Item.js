@@ -2,12 +2,13 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import '../styles/Item.css'
+import Spinner from '../UI/Spinner';
 
 function Item({camiseta, clase, onAdd, removeOneItem, addOneItem}) {
     const item=camiseta;
     return (
         <div className={clase}>
-            <img src={item.img} alt="camiseta en venta"></img>
+            {item.img?<img src={item.img} alt="camiseta en venta"/>:<Spinner/>}
             
             <section className={`${clase}detalles`}>
                 <section className={`${clase}principal`}>

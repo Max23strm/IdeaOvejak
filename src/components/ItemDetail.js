@@ -5,7 +5,6 @@ import TerminarCompra from './TerminarCompra';
 import {CarritoConsumer} from '../context/CarritoProvider';
 
 function ItemDetail({item}) {
-    console.log(item)
     const {addItem, terminar}=CarritoConsumer();
     return (
         <div className="itemDetalles">

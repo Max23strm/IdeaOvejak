@@ -5,6 +5,7 @@ nav{
     justify-content: space-between;
     padding: .5rem .5rem;
     z-index: 1000;
+    background-color: white;
 }
 nav a{
     color: #042A2B;

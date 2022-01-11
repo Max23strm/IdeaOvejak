@@ -3,6 +3,7 @@ import '../styles/ItemList.css'
 import {CarritoConsumer} from '../context/CarritoProvider';
 
 import Item from './Item'
+import Spinner from '../UI/Spinner';
 
 function ItemList({mostrando, filtro}) {
     const {addItem}=CarritoConsumer();
@@ -16,10 +17,7 @@ function ItemList({mostrando, filtro}) {
                     camiseta={camiseta}
                     onAdd={addItem}/>))
                     
-                :<section className="Cargando">
-                    <img src="https://s2.svgbox.net/loaders.svg?ic=oval&color=000000" width="32" height="32" alt="Cargando"/>
-                    <h1>Cargando..</h1>
-                </section>}
+                :<Spinner/>}
         </div>
     )
 }

@@ -1,27 +1,19 @@
 import './App.css';
 import Rutas from './routes/Rutas';
-import React, { useEffect, useState } from 'react'
-import{collection, getDocs} from "firebase/firestore"
-import db from "./service"
-
+import React, { useEffect} from 'react'
+import useFirebase from './hooks/useFirebase';
 function App() {
-    const[data, setData]=useState([])
 
+    
+  //  const[data, setData]=useState([])
+    const {productos, fetchGetDataCollection}= useFirebase()
     useEffect(()=>{
-
-        const itemListCollection=collection(db,"items");
-        getDocs(itemListCollection).then((snapshot)=>{
-            setData(
-            snapshot.docs.map((doc)=>(
-                //console.log(data)
-                ({id:doc.id, ...doc.data()}))
-            ))
-        })
+        fetchGetDataCollection()
     },[])
-    console.log(data)
+
     return (
         <div className="App">
-            <Rutas data={data}/>
+            <Rutas data={productos}/>
         </div>
     );
 }

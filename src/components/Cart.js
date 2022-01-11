@@ -12,7 +12,6 @@ function Cart() {
             {carrito.length===0?
             <CompraVacia/>:
             <CompraNormal/>}
-            <Formulario/>
         </section>
         
     )
