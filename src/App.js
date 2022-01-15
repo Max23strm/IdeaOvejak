@@ -3,16 +3,16 @@ import Rutas from './routes/Rutas';
 import React, { useEffect} from 'react'
 import useFirebase from './hooks/useFirebase';
 function App() {
-
-    
-  //  const[data, setData]=useState([])
     const {productos, fetchGetDataCollection}= useFirebase()
     useEffect(()=>{
         fetchGetDataCollection()
-    },[])
+        //eslint-disable-next-line
+    },[]) 
+
+    
 
     return (
-        <div className="App">
+        <div className={`App`}>
             <Rutas data={productos}/>
         </div>
     );

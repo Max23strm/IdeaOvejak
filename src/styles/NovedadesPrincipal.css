@@ -13,13 +13,17 @@
     border-radius: 10px;
     padding:1rem;
     border: 2px solid #b2b2b2;
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    /* justify-content: center; */
+    width: 90%;
     overflow-x: scroll;
-    scrollbar-color:#D84727 ;
     margin:0 auto;
     box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
-    scroll-behavior: auto;
+}
+.principalNovedades .principalGaleria a{
+    height: fit-content;
+    text-decoration: none;
+    color: black;
+}
+.swiper-slide{
+    height: fit-content;
+    margin: .5rem 0 .8rem 0;
 }

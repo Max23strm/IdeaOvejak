@@ -7,13 +7,24 @@
     border-radius: 10px; 
 	border: solid #BDBDBD 1px; 
 	box-shadow: 5px 9px 16px rgba(0, 0, 0, 0.3)  ;
+    background-color: #e7e7e7;
 }
 .itemDetalles .imagenDetalle{
     width: 90vw;
 }
 
 .detallesGenerales{
-    padding: 1rem;
+    margin: 3rem 2rem;
+}
+.itemDetalles .detallesGenerales h2{
+    font-size: 3rem;
+}
+.itemDetalles .detallesGenerales h3{
+    font-size: 1.5rem;
+    color: rgb(22, 22, 22);
+}
+.itemDetalles .detallesGenerales .titulo p{
+    font-weight: lighter;
 }
 .itemDetalles .detallesGenerales h2,.itemDetalles .detallesGenerales h3{
     padding: 0;
@@ -21,26 +32,33 @@
 }
 
 .detallesMenores{
-    padding-top: .5rem;
+    margin-top: .5rem;
 }
 
 .detallesMenores p{
     font-style: italic;
     padding: 0;
-    margin: 0;
+    margin: .5rem 0;
+}
+.detallesMenores p span{
+    font-weight: bold;
 }
 .detallesMenores .descripcion{
     padding-top: 1rem;
     font-style: normal;
 }
 .sectionPrecio .precio{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem 0;
     text-align: center;
+    color: black;
+}
+.sectionPrecio .precio span{
+    font-size: 2.5rem;
 }
 .sectionPrecio .detallePrecio{
     text-align: center;
-
+    color: black;
 }
 .invisible{
     display: none;
@@ -48,7 +66,6 @@
 .visible{
     display: block;
 }
-
 @media only screen and (min-width:600px){
     .itemDetalles{
         flex-direction: row;

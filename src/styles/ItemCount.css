@@ -7,6 +7,7 @@
     margin: 1rem 0;
     border: 1px solid #042A2B;
     height: fit-content;
+    border-radius: 10px;
 }
 .normalContador section{
     /* align-items: center; */
@@ -19,8 +20,13 @@
 }
 .normalContador section .normalcentro{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    border-radius: 10px;
+    ;
+}
+.normalContador section .normalcentro p{
+    display: none;
 }
 .normalContador section .normalponerQuitar:first-child{
     border-right: 1px solid #042A2B;
@@ -29,6 +35,7 @@
     border-left: 1px solid #042A2B;
 }
 .normalContador section .normalponerQuitar{
+    display: none;
     border: none;
     height: 100%;
     width: 15%;
@@ -43,6 +50,7 @@
     width: inherit;
     /* border-top: 1px solid #042A2B; */
     border: none;
+    border-radius: 10px;
     font-size: 1.2rem;
     padding: .5rem 0;
     color: #042A2B;
@@ -50,10 +58,12 @@
 .normalContador .normalenStock{
     border: none;
     width: inherit;
-    border-top: 1px solid #042A2B;
+    border-radius: 10px;
+    /* border-top: 1px solid #042A2B; */
     font-size: 1.2rem;
-    padding: .5rem 0;
+    padding: 1.2rem 1.5rem;
     color:#042A2B;
+
 
 }
 .normalContador .normalenStock:hover{
@@ -85,6 +95,7 @@
 .detalleContador .detalleseccionPrincipal .detallecentro{
     display: flex;
     flex-direction: column;
+    background-color: white;
     width: 100%;
 }
 .detalleContador .detalleseccionPrincipal .detalleponerQuitar:first-child{
@@ -118,6 +129,7 @@
     font-size: 1.2rem;
     padding: .5rem 0;
     color:#042A2B;
+    background-color: #5EB1BF;
 }
 .detalleContador .detalleenStock:hover{
     background-color: #EF7B45;

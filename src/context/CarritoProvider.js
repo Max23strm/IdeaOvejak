@@ -8,7 +8,6 @@ export const CarritoConsumer= ()=>useContext(CarritoContext)
 function CarritoProvider({children}) {
 
     const [carrito, setCarrito]= useState([])
-    const [comprado, setComprado]= useState("visible");
     const [terminar, setTerminar]= useState("invisible"); 
     const [itemTemporal, setItemTemporal]=useState([])
 
@@ -20,10 +19,8 @@ function CarritoProvider({children}) {
     const isInCart=(id)=>{
         var siEsta= carrito.filter(objeto=> objeto.id===id)
         if(siEsta.length>0){
-            console.log(true)
             return true
         } else{
-            console.log(false)
             return false
             
         }
@@ -33,7 +30,6 @@ function CarritoProvider({children}) {
     const addItem=(item, cantidad,itemId)=>{
         setItemTemporal([item])
         if(!carrito[0]){
-            console.log("no habia nada, lo agregamos")
             item["cantidad"]=cantidad
             setCarrito([...carrito, item])
         }
@@ -48,7 +44,6 @@ function CarritoProvider({children}) {
             }}
             // EJECUTA UNA ACCION DEPENDIENDO SI EL OBJETO EXISTE O NO
             if(existeEnCarrito()){
-                console.log("este no se deberia crear, solo modificar cantidad")
                 carrito[indice].cantidad+=cantidad
                 
             }else{
@@ -89,24 +84,36 @@ function CarritoProvider({children}) {
     const addOneItem=(item,itemId)=>{
         for(var i = 0; i < carrito.length; i++){
             if (carrito[i].id===itemId){
-                let cantidad=carrito[i].cantidad
-                carrito.splice(i,1)
-                cantidad++
-                item["cantidad"]=cantidad
-                setCarrito([...carrito, item])
+                carrito[i].cantidad++
+                //let cantidad=carrito[i].cantidad
+                //carrito.splice(i,1)
+                //cantidad++
+                //item["cantidad"]=cantidad
+                //setCarrito([...carrito, item])
                 }
         }
-    }
+        console.log(carrito)
+    }//
 
     //FUNCION PARA BORRAR TODO
     const clear=()=>{
         setCarrito([])
     }
 
-
+    //TOTAL DE LA COMPRA
+    let total=0
+    const totalCompra=(carrito)=>{
+        if(carrito){
+            console.log(carrito, true)
+        carrito.map((e)=>{
+            let monto=e.cantidad*e.precio
+            return total+=monto
+        })}
+    }
+    totalCompra(carrito)
 
     return (
-        <CarritoContext.Provider value={{carrito, addItem, removeOneItem, clear, isInCart, addOneItem, terminar,itemTemporal,setItemTemporal}}>
+        <CarritoContext.Provider value={{carrito, addItem, removeOneItem, clear, isInCart, addOneItem, terminar,itemTemporal,setItemTemporal,total}}>
             {children}
         </CarritoContext.Provider>
     )

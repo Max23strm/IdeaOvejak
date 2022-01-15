@@ -18,7 +18,7 @@
 
 .catalogodetalles{
     margin: .3rem 1rem;
-    height:100%
+    /* height:100% */
 }
 
 .catalogodetalles h5{
@@ -50,17 +50,21 @@
     align-items: center;
 }
 .catalogolinkazo{
-    margin-left: .5rem;
+    /* margin: .5rem; */
     width: 90%;
     height: 100%;
     border-radius: 20px;
     padding: 1rem 0;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 .catalogobotonazo{
-    padding: 1.5rem;
+    padding: .3rem;
     background-color: #5EB1BF;
     height: 100%;
-    width: 100%;
+    width: 60%;
     border: none;
     border: 1px solid #284d53;
     border-radius: 10px;
@@ -101,6 +105,13 @@
     justify-content: space-between;
     padding: 0 2rem;
 }
+.homeprincipal .hometitulo h4{
+    margin-bottom: 0;
+}
+.homeprincipal .hometitulo h5{
+    margin: .2rem 0;
+}
+
 .homeloInteresante{
     display: none;
 }
@@ -110,32 +121,124 @@
 
 
 /* ELEMENTOS DE CARRiTO */
-
+.carroloInteresante{
+    display: none;
+}
 .carro{
     border: 1px solid #5EB1BF;
-    display:flex;
-    flex-direction: row;
-    height: 17rem;
-    width: 50vw;
-    margin: 2rem 0;
+    display:grid;
+    gap: .7rem;
+    grid-template-columns: 25% 75%;
+    width: 95vw;
+    margin: 1rem 0;
     border-radius: 10px;
     position: relative;
     background-color: white;
 }
 .carro img{
-    width: 12rem;
-    height: 14rem;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin: 1.5rem 2rem;
+    margin: 1.5rem .5rem;
 }
+.carrodetalles{
+    display: flex;
+    flex-direction: column;
+}
+.carroprincipal{
+    display: flex;
+    flex-direction: column;
+}
+.carrotitulo{
+    margin-top: .5rem;
+}
+.carrotitulo h4, .carrotitulo h5{
+    font-size: 1.1rem;
+    margin:0;
+}
+.carroItem{
+    margin-top: .3rem;
+    font-size: 1rem;
+    font-weight:400;
+    text-transform: uppercase;
+}
+.carroDetallesCarro P{
+    color:black;
+    margin-top: .15rem;
+    font-size: .8rem;
+}
+.carroPrecios{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: fit-content;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.carroPrecios p{
+    font-size: .7rem;
+}
+.carroPrecios p span{
+    font-size: 1.5rem;
+}
+.carroAgregarQuitar{
+    right: 3rem;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.carroAgregarQuitar p{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.carroAgregarQuitar .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.carroAgregarQuitar .botones button{
+    border: 1px solid #074749;
+    background-color: #042A2B;
+    color: white;
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: 10px;
+    margin:.2rem .2rem
+}
+
+.carroAgregarQuitar .botones button:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width:1000px){
+.carro{
+    /* border: 1px solid #5EB1BF; */
+    /* display:flex;
+    flex-direction: row; */
+    /* height: 17rem; */
+    width: 45vw;
+    margin: 2rem .2rem 2rem 0;
+    gap: 1rem;
+    /* border-radius: 10px; */
+    position: relative;
+    background-color: white;
+}
+.carrodetalles{
+    width: 90%;
+}
+
 .carroprincipal{
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
-
 
 .carrotitulo h4, .carrotitulo h5{
     font-size: 1.7rem;
@@ -144,17 +247,11 @@
 
 .carroItem{
     margin-top: .3rem;
-    font-size: .7rem;
+    font-size: 1.1rem;
     font-weight:400;
     text-transform: uppercase;
 }
 
-.carroloInteresante{
-    display: none;
-}
-/* .carroDetalles{
-    border: 1px solid green;
-} */
 .carroDetallesCarro P{
     color:black;
     margin-top: .3rem;
@@ -162,11 +259,6 @@
 }
 .carroPrecios{
     display: flex;
-    width: 65%;
-    height: fit-content;
-    position: absolute;
-    bottom: 0;
-    left: 16rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -179,21 +271,24 @@
 }
 
 .carroAgregarQuitar{
-    position: absolute;
     right: 3rem;
-    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid purple; */
-    height: fit-content;
+    width: 100%;
+    
 }
 
+.carroAgregarQuitar .botones{
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
 .carroAgregarQuitar p{
     font-size: 1rem;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto .5rem auto;
 }
-
+/* 
 .carroAgregarQuitar .botones button{
     border: 1px solid #074749;
     background-color: #042A2B;
@@ -202,4 +297,6 @@
     padding: .8rem;
     border-radius: 10px;
     margin:.2rem .2rem
+} */
+    
 }

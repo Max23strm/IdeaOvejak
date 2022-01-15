@@ -1,5 +1,5 @@
 import React from 'react'
-import SwiperCore, { Navigation, Pagination, A11y,Autoplay, Scrollbar } from 'swiper';
+import SwiperCore, { Navigation, Autoplay, Pagination, A11y, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import img1 from '../imagenes/carruselPrincipal/mainPSG.jpg'
 import img2 from '../imagenes/carruselPrincipal/mainSuperRugby.jpg'
@@ -13,11 +13,19 @@ import "../styles/Landing.css"
 import { Link } from 'react-router-dom';
 import NovedadesPrincipal from '../components/NovedadesPrincipal';
 
-SwiperCore.use([Pagination,Navigation])
+SwiperCore.use([Pagination,Navigation, Autoplay])
 
 function Home({data}) {
 
-    const slides=[img1,img2,img3,img4]
+    const slides=[{img:img1,
+                    "index":0
+                    },
+                    {img:img2,
+                    "index":1},
+                    {img:img3,
+                    "index":2},
+                    {img:img4,
+                    "index":3}]
 
     return (
         <div className="landing" >
@@ -26,20 +34,19 @@ function Home({data}) {
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
-                autoplay={true}
+                autoplay={{delay:"5000"}}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
                 >
-                    {slides.map((element)=><SwiperSlide>
-                        <Link to="">
-                        <img src={element} className="imagenCarruselPrincipal"alt="slide" key={element.index}/>
+                    {slides.map((element)=><SwiperSlide key={element.index}>
+                        <Link to="" >
+                            <img src={element.img} className="imagenCarruselPrincipal"alt="slide" />
                         </Link>
                         </SwiperSlide>)
                     }
                 </Swiper>
             </section>
+
 
         {/* Segunda seccion de la pagina principal */}
 

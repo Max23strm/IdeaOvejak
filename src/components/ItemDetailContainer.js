@@ -8,12 +8,10 @@ import useFirebase from '../hooks/useFirebase';
 function ItemDetailContainer() {
     const identi=useParams().id
     const {producto, fetchGetIndividualProduct}= useFirebase()
-    console.log(identi)
-
         useEffect(()=>{
             fetchGetIndividualProduct(identi)
+            //eslint-disable-next-line
         },[])
-    console.log(producto)
     return (
         <div className="itemDetailContainer">
             <ItemDetail item={producto}/>

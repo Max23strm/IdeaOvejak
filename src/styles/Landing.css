@@ -1,10 +1,10 @@
 .landing{
+    margin-top: 91px;
     background-color: #9EBABF;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.96'%3E%3Cpolygon fill='%23acc4c8' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23b9cdd1' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23c7d7da' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23d5e1e3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23e3ebec' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23f1f5f6' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23FFFFFF' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-    /* background-attachment: fixed; */
 }
 
 .swiper-slide{
@@ -12,55 +12,61 @@
     justify-content: center;
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
 }
 
+
 .imagenCarruselPrincipal{
-    object-fit: cover;
+    object-fit:cover;
     width: 100vw;
+    height: 90vh;
+    /* width: 100vw; */
 
 }
 
 .deportesPrincipal{
     margin: 5rem 0;
 }
+
 .deportesPrincipal h2{
     font-family: 'Staatliches', cursive;
     font-size: 2.5rem;
     text-align: center;
     letter-spacing: .8rem;
 }
+
 .deportesImagenes{
     margin-top: 3rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .deportesImagenes a{
-    width: 22rem;
-    height: 34rem;
+    width: 85vw;
+    height: 20vh;
     margin: 0 3rem;
-    border-radius: 10px;
+    /* border-radius: 5px; */
     position: relative;
+    /* margin-bottom: 2rem; */
 }
 
 .deportesImagenes a h3{
     position: absolute;
     text-decoration: none;
     color: transparent;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: lighter;
-    top: 2rem;
-    top:50%;
+    top:30%;
     left:50%;
     transform: translate(-50%,-50%);
 }
+
 .deportesImagenes a img{
-    width: 22rem;
-    height: 34rem;
+    width: 85vw;
+    height: 20vh;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .deportesImagenes a:hover img
@@ -69,10 +75,69 @@
     filter:brightness(0.4);
     size: 1rem;
     transition: all .5s 0s ease-in;
+    zoom: normal;
 }
 .deportesImagenes a:hover h3{
     transition: 100ms;
     font-weight: bold;
     color:#FCF7FF;
-
+    
 }
+
+@media only screen and (min-width:850px){
+    .deportesImagenes{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .deportesImagenes a{
+        width: 30vw;
+        height: 34rem;
+        margin: 0 1rem;
+        border-radius: 10px;
+        position: relative;
+    }
+    .deportesImagenes a h3{
+        position: absolute;
+        text-decoration: none;
+        color: transparent;
+        font-size: 3rem;
+        font-weight: lighter;
+        top: 2rem;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .deportesImagenes a img{
+        width: 30vw;
+        height: 34rem;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+@media only screen and (min-width:1300px){
+
+    .deportesImagenes{
+        justify-content: center;
+    }
+    .deportesImagenes a{
+        width: 25rem;
+        height: 40rem;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .deportesImagenes a img{
+        width: 25rem;
+        height: 40rem;
+        border-radius: 0;
+    }
+    
+}
+
+
+

@@ -9,9 +9,7 @@ function Formulario() {
     const { fetchGenerateTicket}= useFirebase()
 
 
-    const {carrito,removeOneItem, clear, addOneItem}=CarritoConsumer()  
-    let total=0
-    carrito.map(element=>total+=element.precio)
+    const {carrito, clear, total}=CarritoConsumer()
     const [formulario, setFormulario]= useState({
         buyer:{
             nombre:"",
@@ -44,7 +42,7 @@ function Formulario() {
         <section>
             <form>
                 <section>
-                    <label for="nombre">Nombre</label>
+                    <label htmlFor="nombre">Nombre</label>
                     <input 
                         id="nombre"
                         type="text"
@@ -57,7 +55,7 @@ function Formulario() {
                 </section>
 
                 <section>
-                    <label for="apellido">Apellido</label>
+                    <label htmlFor="apellido">Apellido</label>
                     <input 
                         name="apellido"
                         placeholder='Ingrese su apellido'
@@ -68,7 +66,7 @@ function Formulario() {
                 </section>
 
                 <section>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input 
                         name="email"
                         placeholder='Ingrese su email'
@@ -78,7 +76,7 @@ function Formulario() {
                         type="email"/>
                 </section>
                 <section>
-                    <label for="telefono">Telefono</label>
+                    <label htmlFor="telefono">Telefono</label>
                     <input 
                         name="telefono"
                         placeholder='Ingrese su número telefonico'
@@ -89,7 +87,7 @@ function Formulario() {
                 </section>
 
                 <section>
-                    <label for="detalles">Detalles adicionales</label>
+                    <label htmlFor="detalles">Detalles adicionales</label>
                     <textarea 
                         name="detalles"
                         onChange={handleChange}
