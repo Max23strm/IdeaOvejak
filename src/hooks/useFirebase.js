@@ -5,7 +5,7 @@ import db from "../service"
 
 
 function useFirebase() {
-    const[producto, setProducto]=useState()
+    const[producto, setProducto]=useState({})
     const[productos, setProductos]=useState([])
     
     //BUSCA UNA COLECCION
