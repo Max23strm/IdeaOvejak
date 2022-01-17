@@ -80,8 +80,10 @@ function NavBar() {
                             <li><NavLink to="/category/Accesorios">Accesorios</NavLink></li>
                         </ul>
                     </li>
-                        <li className="opcionNavegacion">
-                        CONTACTO
+                    <li className="opcionNavegacion">
+                        <NavLink to="/ordenes">
+                            ORDENES
+                        </NavLink>
                     </li>
                 </ul>
             </section>

@@ -75,7 +75,6 @@
     filter:brightness(0.4);
     size: 1rem;
     transition: all .5s 0s ease-in;
-    zoom: normal;
 }
 .deportesImagenes a:hover h3{
     transition: 100ms;
@@ -129,12 +128,17 @@
         height: 40rem;
         margin: 0;
         border-radius: 0;
+        overflow:hidden;
     }
     
     .deportesImagenes a img{
         width: 25rem;
         height: 40rem;
         border-radius: 0;
+    }
+    .deportesImagenes a img:hover{
+        transform: scale(1.1);
+
     }
     
 }

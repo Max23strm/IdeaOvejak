@@ -68,9 +68,12 @@ function CarritoProvider({children}) {
                     carrito.splice(i,1)
                     cantidad--
                     item["cantidad"]=cantidad
-                    setCarrito([...carrito, item])
+                    setCarrito([ item,...carrito])
                 }else{
-                    carrito.splice(i,1)
+                    setCarrito(carrito.filter((ele)=>{
+                                //eslint-disable-next-line
+                        return ele!=item
+                    }))
                     if(!carrito[0]){
                         setCarrito([])
                     }
@@ -84,15 +87,13 @@ function CarritoProvider({children}) {
     const addOneItem=(item,itemId)=>{
         for(var i = 0; i < carrito.length; i++){
             if (carrito[i].id===itemId){
-                carrito[i].cantidad++
-                //let cantidad=carrito[i].cantidad
-                //carrito.splice(i,1)
-                //cantidad++
-                //item["cantidad"]=cantidad
-                //setCarrito([...carrito, item])
+                let cantidad=carrito[i].cantidad
+                carrito.splice(i,1)
+                cantidad++
+                item["cantidad"]=cantidad
+                setCarrito([ item,...carrito])
                 }
         }
-        console.log(carrito)
     }//
 
     //FUNCION PARA BORRAR TODO
@@ -104,7 +105,6 @@ function CarritoProvider({children}) {
     let total=0
     const totalCompra=(carrito)=>{
         if(carrito){
-            console.log(carrito, true)
         carrito.map((e)=>{
             let monto=e.cantidad*e.precio
             return total+=monto
@@ -113,7 +113,17 @@ function CarritoProvider({children}) {
     totalCompra(carrito)
 
     return (
-        <CarritoContext.Provider value={{carrito, addItem, removeOneItem, clear, isInCart, addOneItem, terminar,itemTemporal,setItemTemporal,total}}>
+        <CarritoContext.Provider value={{carrito,
+            total,
+            addItem,
+            removeOneItem,
+            clear,
+            isInCart,
+            addOneItem,
+            terminar,
+            itemTemporal,
+            setItemTemporal
+            }}>
             {children}
         </CarritoContext.Provider>
     )

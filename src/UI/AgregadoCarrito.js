@@ -13,7 +13,7 @@ function AgregadoCarrito() {
     }
     return (
         <section className={`${clase} otro` }>
-            <img className="imagenpop"src={itemTemporal[0]?itemTemporal[0].img:null} alt='imagen de producto'></img>
+            <img className="imagenpop"src={itemTemporal[0]?itemTemporal[0].img[0]:null} alt='imagen de producto'></img>
             <p>Producto agregado al carrito</p>
         </section>
     )

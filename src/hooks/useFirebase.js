@@ -4,13 +4,7 @@ import{addDoc, collection, getDocs, getDoc, doc} from "firebase/firestore"
 import db from "../service"
 
 
-
-
-
-
-
 function useFirebase() {
-    
     const[producto, setProducto]=useState({})
     const[productos, setProductos]=useState([])
     
@@ -44,21 +38,37 @@ function useFirebase() {
 
     //GENERA UN TICKET
     const fetchGenerateTicket= async (datos)=>{
+    let orden=""
         try{
             const col=collection(db,"ordenes")
             const order= await addDoc(col,datos)
-            
-            console.log(`Numero de orden ${order.id}`)
+            orden=order.id
+            console.log(`Numero de orden ${orden}`)
+            return orden
         } catch (error){
+        }
+
+        }
+
+    const fetchGetIndividualTicket= async (id)=>{
+        try{
+            const document= doc(db,"ordenes",id)
+            const response= await getDoc(document)
+            let result=response.data()
+            setProducto({id:response.id,...result})
+        }
+        catch (error){
             console.log(error)
         }
     }
     
     return {
+
         producto,
         productos,
         fetchGenerateTicket,
         fetchGetDataCollection,
+        fetchGetIndividualTicket,
         fetchGetIndividualProduct
     }
 }

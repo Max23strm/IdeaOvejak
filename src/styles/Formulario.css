@@ -24,3 +24,13 @@ form section input, form section textarea{
     font-size: 1.1rem;
     background-color: #c4c4c4;
 }
+.incompleto{
+    display: block;
+    color: red;
+    margin: 0;
+    /* animation: heartbeat 1.5s ease-in-out infinite both; */
+}
+.completo{
+    display: none;
+}
+

@@ -1,0 +1,38 @@
+.buscadorOrdenes{
+    margin-top: 100px;
+    min-height: 100vh;
+}
+.buscadorOrdenes section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.buscadorOrdenes section input{
+    border: none;
+    margin-bottom: 1rem;
+    height: 2rem;
+    border: 2px solid #042A2B;
+    border-radius: 10px;
+}
+.buscadorOrdenes section input:active{
+    border:2px solid #D84727;
+}
+
+.buscadorOrdenes section button{
+    padding: .7rem;
+    font-size: 1.2rem;
+    border: 2px solid #042A2B;
+    border-radius: 10px;
+    color: #042A2B;
+    font-weight: bold;
+    background-color: white;
+}
+
+.buscadorOrdenes section button:hover{
+    cursor: pointer;
+    background-color: #042A2B;
+    color: #D84727;
+}

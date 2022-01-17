@@ -5,11 +5,14 @@ import '../styles/Formulario.css'
 import useFirebase from '../hooks/useFirebase';
 
 
-function Formulario() {
+function Formulario({ orden, setOrden}) {
     const { fetchGenerateTicket}= useFirebase()
-
-
     const {carrito, clear, total}=CarritoConsumer()
+    const [fecha, setFecha]=useState(new Date())
+    const [error, setError]=useState({})
+    const [clase, setClase]=useState("completo")
+
+
     const [formulario, setFormulario]= useState({
         buyer:{
             nombre:"",
@@ -18,13 +21,14 @@ function Formulario() {
             email:"",
             mensaje:""
         },
+            hora:fecha,
             total: total,
             items:carrito
     }
     )
     
     //Destucturing para los elementos del formulario//
-    const { buyer:{nombre,apellido,telefono,email}}=formulario
+    const { buyer:{nombre,apellido,telefono,email, mensaje}}=formulario
 
     const handleChange=(e)=>{
         const {name,value} =e.target;
@@ -35,68 +39,67 @@ function Formulario() {
                 [name]:value
             }
         })
-
     }
 
+    const handleBlur=(e)=>{
+        const {value, name}=e.target;
+        if(value===""){
+            setError({...error,[name]:"Campo bligatorio"})
+            setClase("incompleto")
+        } else{
+            setError({})
+            setClase("completo")
+        }
+    }
+
+
+    let llaves=Object.keys(formulario.buyer)
     return (
         <section>
+            <h2>Datos de envio</h2>
             <form>
-                <section>
-                    <label htmlFor="nombre">Nombre</label>
-                    <input 
-                        id="nombre"
-                        type="text"
-                        //value={nombre}
-                        name="nombre"
-                        value={nombre}
-                        placeholder='Ingrese su nombre'
-                        onChange={handleChange}
-                        />
-                </section>
-
-                <section>
-                    <label htmlFor="apellido">Apellido</label>
-                    <input 
-                        name="apellido"
-                        placeholder='Ingrese su apellido'
-                        id="apellido"
-                        value={apellido}
-                        onChange={handleChange} 
-                        type="text"/>
-                </section>
-
-                <section>
-                    <label htmlFor="email">Email</label>
-                    <input 
-                        name="email"
-                        placeholder='Ingrese su email'
-                        id="email"
-                        value={email}
-                        onChange={handleChange}
-                        type="email"/>
-                </section>
-                <section>
-                    <label htmlFor="telefono">Telefono</label>
-                    <input 
-                        name="telefono"
-                        placeholder='Ingrese su número telefonico'
-                        id="email"
-                        value={telefono}
-                        onChange={handleChange}
-                        type="tel"/>
-                </section>
-
-                <section>
-                    <label htmlFor="detalles">Detalles adicionales</label>
-                    <textarea 
-                        name="detalles"
-                        onChange={handleChange}
-                        placeholder='Ingrese su detalles adicionales'
-                        id="detalles"
-                        type="textarea"/>
-                </section>
+                {
+                    llaves.map((ele)=>{
+                        return <section key={ele}>
+                            <label htmlFor={ele}>{ele}</label>
+                            {ele==="mensaje"? 
+                            <textarea type="textarea"
+                            name={ele}
+                            value={mensaje}
+                            placeholder={`Ingrese su ${ele}`}
+                            onChange={handleChange}
+                            onBlur={(e)=>handleBlur(e)}
+                            />:<input
+                            type={ele==="telefono"?"tel":ele==="mensaje"?"textarea":"text"}
+                            name={ele}
+                            onBlur={(e)=>handleBlur(e)}
+                            value={ele==="nombre"?nombre:
+                                    ele==="apellido"?apellido:
+                                    ele==="telefono"?telefono:
+                                    ele==="email"?email:null
+                                }
+                            placeholder={`Ingrese su ${ele}`}
+                            onChange={handleChange}
+                            />}
+                            <h6 className={clase}>{ele==="nombre"?error.nombre:
+                                    ele==="apellido"?error.apellido:
+                                    ele==="telefono"?error.telefono:
+                                    ele==="email"?error.email:null
+                                }</h6>
+                        </section>
+                    })
+                }
             </form>
-            <BotonesCompra datos={formulario} comprar={fetchGenerateTicket} total={total}carrito={carrito} clear={clear} />
+            <BotonesCompra 
+                orden={orden}
+                setOrden={setOrden} 
+                setFecha={setFecha} 
+                fecha={fecha} 
+                datos={formulario} 
+                comprar={fetchGenerateTicket} 
+                total={total}
+                carrito={carrito} 
+                clear={clear} />
         </section>
     )
 }

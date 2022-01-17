@@ -125,15 +125,17 @@
     display: none;
 }
 .carro{
-    border: 1px solid #5EB1BF;
+    border-bottom: 2px solid #5EB1BF;
     display:grid;
     gap: .7rem;
     grid-template-columns: 25% 75%;
     width: 95vw;
     margin: 1rem 0;
-    border-radius: 10px;
     position: relative;
     background-color: white;
+}
+.carro:last-child{
+    border: none;
 }
 .carro img{
     width: 100%;
@@ -218,14 +220,9 @@
 
 @media only screen and (min-width:1000px){
 .carro{
-    /* border: 1px solid #5EB1BF; */
-    /* display:flex;
-    flex-direction: row; */
-    /* height: 17rem; */
     width: 45vw;
     margin: 2rem .2rem 2rem 0;
     gap: 1rem;
-    /* border-radius: 10px; */
     position: relative;
     background-color: white;
 }
@@ -288,15 +285,64 @@
     text-align: center;
     margin: 0 auto .5rem auto;
 }
-/* 
-.carroAgregarQuitar .botones button{
-    border: 1px solid #074749;
-    background-color: #042A2B;
-    color: white;
+}
+
+    /* TICKET */
+
+.ticketItem{
+    display: flex;
+    width: 70vw;
+    /* padding: 0 3rem; */
+    border-bottom: 2px solid #042A2B;
+    margin: 1rem auto;
+}
+
+.ticketItemprincipal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ticketItemdetalles{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.ticketItemprincipal{
+    width: 100%;
+    justify-content: space-between;
+}
+.ticketItemPrecios{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 90%;
+    margin-left: 5vw;
+    justify-content: space-between;
+}
+
+.ticketItemtitulo{
+    display: flex;
+    flex-direction: row;
+}
+.ticketItemtitulo h4, .ticketItemtitulo h5{
     font-size: 1rem;
-    padding: .8rem;
-    border-radius: 10px;
-    margin:.2rem .2rem
-} */
-    
+    padding: 0;
+    margin: 0 .5rem 0 0;
+    font-weight: normal;
+} 
+.ticketItem img, .ticketItemAgregarQuitar, .ticketItemDetallesCarro, .ticketItemloInteresante{
+    display: none;
+}
+@media only screen and (min-width:750px){
+    .ticketItemdetalles{
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+}
+@media only screen and (min-width:1150px){
+    .ticketItemPrecios{
+        flex-direction: row;
+    }
+
 }

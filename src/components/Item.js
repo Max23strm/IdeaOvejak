@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Item.css'
 import Spinner from '../UI/Spinner';
 
-function Item({camiseta, clase, onAdd, removeOneItem, addOneItem}) {
+function Item({camiseta, clase, onAdd, removeOneItem, addOneItem, }) {
     const item=camiseta
     
     return (
