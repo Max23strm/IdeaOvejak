@@ -13,7 +13,6 @@ function TicketContainer() {
             fetchGetIndividualTicket(identi)
             //eslint-disable-next-line
         },[])
-                console.log(producto)
     return (
         <div>
             {producto?<Ticket ticket={producto}/>:<Spinner/>}

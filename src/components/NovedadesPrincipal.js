@@ -25,8 +25,9 @@ function NovedadesPrincipal(data) {
                 >
                     {camisetas.map((element)=>element.popular?
                     <SwiperSlide key={element.id}>
+                        <Item clase="home"  camiseta={element}/>
                         <Link  to={`/Item/${element.id}`}>
-                            <Item clase="home"  camiseta={element}/>
+                            <button className='BotonNovedad'>Ver</button>
                         </Link>
                     </SwiperSlide>:null)}
                 </Swiper>

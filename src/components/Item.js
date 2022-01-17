@@ -25,7 +25,7 @@ function Item({camiseta, clase, onAdd, removeOneItem, addOneItem, }) {
                 </section>
                 <section className={`${clase}Precios`}>
                     <p>CANTIDAD: {item.cantidad}</p>
-                    <p>TOTAL: $ <span>{item.precio*item.cantidad}</span> USD</p>
+                    <p>TOTAL: $ {item.precio*item.cantidad} USD</p>
                 </section>
             <section className={`${clase}AgregarQuitar`}>
                 <p>MODIFICAR CANTIDAD</p>

@@ -26,4 +26,23 @@
 .swiper-slide{
     height: fit-content;
     margin: .5rem 0 .8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.swiper-slide a{
+    text-decoration: none;
+}
+.swiper-slide .BotonNovedad{
+    border: 2px solid #042A2B;
+    color: #042A2B;
+    background-color: white;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+}
+.swiper-slide .BotonNovedad:hover{
+    cursor: pointer;
+    background-color: #042A2B;
+    color: #D84727;
 }

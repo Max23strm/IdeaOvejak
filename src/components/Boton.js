@@ -3,7 +3,7 @@ import React from 'react'
 function Boton({orden}) {
 
     return (
-        <button onClick={()=>{console.log(orden)}}>
+        <button>
             Ver Ticket
         </button>
     )

@@ -43,7 +43,6 @@ function useFirebase() {
             const col=collection(db,"ordenes")
             const order= await addDoc(col,datos)
             orden=order.id
-            console.log(`Numero de orden ${orden}`)
             return orden
         } catch (error){
         }

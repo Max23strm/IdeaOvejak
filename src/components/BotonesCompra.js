@@ -11,7 +11,6 @@ function BotonesCompra({datos, comprar,total,clear,setFecha,orden,setOrden}) {
         valor= comprar(datos)
         valor.then((retorno)=>{
             setOrden(retorno)
-            console.log(orden)
         })
     }
     const verifica=(datos)=>{
