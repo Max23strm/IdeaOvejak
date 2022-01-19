@@ -1,5 +1,4 @@
 import { useState } from 'react/cjs/react.development'
-//import {GlobarProvider} from '../context/GlobalProvider'
 import{addDoc, collection, getDocs, getDoc, doc} from "firebase/firestore"
 import db from "../service"
 

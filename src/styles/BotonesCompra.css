@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: right;
     margin: 2rem 0;
+    background-color: white;
+    border: 2px solid #042A2B;
+    width: fit-content;
+    padding: .5rem;
+    justify-content: right;
+    border-radius: 10px;
 }
 
 .botonesDeCompra p{
@@ -12,6 +18,10 @@
 
 .botonesDeCompra p span{
     font-size: 1.5rem;
+}
+
+.botonesDeCompra button:hover{
+    cursor: pointer;
 }
 
 .botonesDeCompra button{
@@ -44,5 +54,11 @@
 .botonesDeCompra .botonComprar:hover{
     background-color: #5EB1BF;
     border-color: #042A2B;
-    cursor: pointer;
+}
+a .verTicket{
+    border: 2px solid #5EB1BF;
+    background-color: #042A2B;
+    color: #5EB1BF;
+    font-weight: bold;
+    
 }
