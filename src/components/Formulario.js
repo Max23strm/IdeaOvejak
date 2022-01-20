@@ -12,7 +12,6 @@ function Formulario({ orden, setOrden}) {
     const [error, setError]=useState({})
     const [clase, setClase]=useState("completo")
 
-
     const [formulario, setFormulario]= useState({
         buyer:{
             nombre:"",
@@ -98,7 +97,7 @@ function Formulario({ orden, setOrden}) {
                 datos={formulario} 
                 comprar={fetchGenerateTicket} 
                 total={total}
-                carrito={carrito} 
+                carrito={carrito}
                 clear={clear} />
         </section>
     )

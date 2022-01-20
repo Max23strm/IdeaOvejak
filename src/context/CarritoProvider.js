@@ -85,16 +85,19 @@ function CarritoProvider({children}) {
 
     //FUNCION PARA AGREGAR UN ITEM
     const addOneItem=(item,itemId)=>{
+        let cantidad=""
         for(var i = 0; i < carrito.length; i++){
             if (carrito[i].id===itemId){
-                let cantidad=carrito[i].cantidad
-                carrito.splice(i,1)
+                cantidad=carrito[i].cantidad
                 cantidad++
-                item["cantidad"]=cantidad
-                setCarrito([ item,...carrito])
-                }
+                //carrito.splice(i,1)
+                //setCarrito([item,...carrito])
+            }
         }
-    }//
+        let arr = carrito.filter(cosa => cosa !== item)
+        item["cantidad"]=cantidad
+        setCarrito([item,...arr])
+        console.log(carrito)    }
 
     //FUNCION PARA BORRAR TODO
     const clear=()=>{

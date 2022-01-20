@@ -22,9 +22,11 @@ function BotonesCompra({datos, comprar,total,clear,setFecha,orden,setOrden}) {
             comprado(datos)
         }
     }
-
-
-
+    
+    //eslint-disable-next-line
+    if(datos.total!=total){
+        datos.total=total
+    }
 
     return (
         <section className='botonesDeCompra'>

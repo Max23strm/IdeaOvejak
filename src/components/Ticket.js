@@ -8,6 +8,7 @@ function Ticket({ticket}) {
         let fecha=new Date(ticket.hora.seconds*1000)
         fechacompra=fecha.toLocaleDateString()}
         else{fechacompra="cargando"}
+        console.log(ticket.total)
     return (
         <div className='ticket'>
             <h2 className='titulo'>Orden de compra</h2>
