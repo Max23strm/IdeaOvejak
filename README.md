@@ -18,3 +18,7 @@ Este es un Ecommerce, en el cual se simula una tienda de indumentaria deportiva.
 Las imagenes son sacadas de otras tiendas para ayudar a visualizarla.
 
 
+### Ordenes
+
+Dentro del visualizador de ordenes se puede ingresar el ID de una orden para verificar los datos de compra./
+Puede ingresar 

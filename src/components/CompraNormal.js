@@ -3,7 +3,7 @@ import {CarritoConsumer} from '../context/CarritoProvider';
 import Item from './Item'
 import Formulario from './Formulario';
 import '../styles/Cart.css'
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 
 function CompraNormal() {
     const[orden, setOrden]=useState()
