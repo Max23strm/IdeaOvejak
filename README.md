@@ -21,4 +21,4 @@ Las imagenes son sacadas de otras tiendas para ayudar a visualizarla.
 ### Ordenes
 
 Dentro del visualizador de ordenes se puede ingresar el ID de una orden para verificar los datos de compra./
-Puede ingresar 
+Puede ingresar BM21q3Ppm9p9abzolfD8 para una orden de muestra.
