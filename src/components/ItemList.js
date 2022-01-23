@@ -5,9 +5,8 @@ import {CarritoConsumer} from '../context/CarritoProvider';
 import Item from './Item'
 import Spinner from '../UI/Spinner';
 
-function ItemList({mostrando, filtro}) {
+function ItemList({mostrando}) {
     const {addItem}=CarritoConsumer();
-    //console.log(mostrando)
     return (
         <div className="ItemList">
 

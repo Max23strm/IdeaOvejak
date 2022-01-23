@@ -35,7 +35,7 @@ function Catalogo({data}) {
         <section className='viewCatalogo'>
             
 
-            <ItemListContainer data={mostrando} filtro={elFiltro} />
+            <ItemListContainer data={mostrando} />
         </section>
         </section>
     )
