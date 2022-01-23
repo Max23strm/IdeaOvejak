@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {CarritoConsumer} from '../context/CarritoProvider';
 import Item from './Item'
 import Formulario from './Formulario';
-import '../styles/Cart.css'
+import '../styles/Cart.css' 
 
 function CompraNormal() {
     const[orden, setOrden]=useState()
