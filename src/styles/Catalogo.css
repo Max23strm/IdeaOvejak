@@ -1,4 +1,5 @@
 .mainCatalogo{
+    margin-top: 99px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */

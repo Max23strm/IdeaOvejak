@@ -10,15 +10,16 @@
     
 }
 
+.buscadorOrdenes section input:focus{
+    border: none;
+    outline:3px solid #D84727;
+}
 .buscadorOrdenes section input{
     border: none;
     margin-bottom: 1rem;
     height: 2rem;
     border: 2px solid #042A2B;
     border-radius: 10px;
-}
-.buscadorOrdenes section input:active{
-    border:2px solid #D84727;
 }
 
 .buscadorOrdenes section button{
