@@ -66,9 +66,13 @@
     height: 100%;
     width: 60%;
     border: none;
-    border: 1px solid #284d53;
+    border: 2px solid #284d53;
     border-radius: 10px;
     font-size: 1.1rem;
+}
+.catalogobotonazo:hover{
+    border: 2px solid #042A2B;
+    cursor: pointer;
 }
 
 .catalogoDetallesCarro,.catalogoAgregarQuitar, .catalogoPrecios{

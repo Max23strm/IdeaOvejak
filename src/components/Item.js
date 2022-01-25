@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import '../styles/Item.css'
 import Spinner from '../UI/Spinner';
@@ -24,6 +23,7 @@ function Item({camiseta, clase, onAdd, removeOneItem, addOneItem, }) {
                     <p>ARTICULO NO PERSONALIZADO</p>
                 </section>
                 <section className={`${clase}Precios`}>
+                    <p >STOCK: {item.stock}</p>
                     <p>CANTIDAD: {item.cantidad}</p>
                     <p>TOTAL: $ {item.precio*item.cantidad} USD</p>
                 </section>
@@ -46,7 +46,7 @@ function Item({camiseta, clase, onAdd, removeOneItem, addOneItem, }) {
                         Detalles..
                     </button>
                 </Link>
-                <ItemCount stock={item.stock} item={item} onAdd={onAdd} clase="normal"initial="1"/>
+                {/* <ItemCount stock={item.stock} item={item} onAdd={onAdd} clase="normal"initial="1"/> */}
             </section>
         </div>
     )

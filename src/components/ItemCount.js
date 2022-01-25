@@ -1,8 +1,12 @@
 import React, {useState} from 'react'
 import '../styles/ItemCount.css'
 
-function ItemCount({stock, initial, onAdd, clase, clase2, item}) {
+function ItemCount({stock, initial, onAdd, clase, clase2, item, setCompraTerminada}) {
     const[cantidad, setCantidad]= useState(parseInt(initial))
+    const elementoAgregado=(item, cantidad, itemid)=>{
+        onAdd(item,cantidad,itemid)
+        setCompraTerminada("noEscondido")
+    }
     return (
         <div className={`${clase}Contador ${clase2}`}>
             <section className={`${clase}seccionPrincipal`}>
@@ -17,7 +21,7 @@ function ItemCount({stock, initial, onAdd, clase, clase2, item}) {
                     <button className={stock<=0?
                         `${clase}sinStock` :`${clase}enStock`}
                         disabled={stock<=0?true:false}
-                        onClick={()=>onAdd(item, cantidad,item.id)}>
+                        onClick={()=>elementoAgregado(item, cantidad,item.id)}>
                             {stock<=0?"No disponible":"Agregar al carrito"}
                     </button>
                 

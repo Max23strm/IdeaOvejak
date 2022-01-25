@@ -85,6 +85,7 @@ function CarritoProvider({children}) {
 
     //FUNCION PARA AGREGAR UN ITEM
     const addOneItem=(item,itemId)=>{
+        if(item.cantidad!==item.stock){
         let cantidad=""
         for(var i = 0; i < carrito.length; i++){
             if (carrito[i].id===itemId){
@@ -97,7 +98,8 @@ function CarritoProvider({children}) {
         let arr = carrito.filter(cosa => cosa !== item)
         item["cantidad"]=cantidad
         setCarrito([item,...arr])
-        console.log(carrito)    }
+            }
+    }
 
     //FUNCION PARA BORRAR TODO
     const clear=()=>{

@@ -1,15 +1,18 @@
 import ItemCount from './ItemCount'
 import '../styles/ItemDetail.css'
-import ProductGalery from './ProductGalery';
 import TerminarCompra from './TerminarCompra';
 import {CarritoConsumer} from '../context/CarritoProvider';
+import { useState } from 'react';
+import Spinner from '../UI/Spinner';
 
 function ItemDetail({item}) {
-    const {addItem, terminar}=CarritoConsumer();
+    const {addItem}=CarritoConsumer();
+    const [compraTerminada, setCompraTerminada]= useState("escondido")
     return (
         <div className="itemDetalles">
             <section className="galeriaContenedor">
-                <ProductGalery elementos={item.img}/>
+                {item.img?<img src={item.img[0]} alt="imagen del producto"/>:<Spinner/>}
+                
             </section>
 
             <section className="detallesGenerales">
@@ -27,10 +30,11 @@ function ItemDetail({item}) {
                 <p><span>Tipo:</span> {item.indumentaria}</p>
                 <p><span>Deporte:</span> {item.deporte}</p>
                 <p><span>Torneo:</span> {item.torneo}</p>
+                <p><span>Stock:</span> {item.stock}</p>
                 <p className="descripcion">{item.descripcion}</p>
             </section>
-            <ItemCount stock={item.stock} item={item} clase="detalle" onAdd={addItem} initial="1"/>
-            <TerminarCompra clase={terminar}/>
+            <ItemCount stock={item.stock} item={item} clase="detalle" onAdd={addItem} setCompraTerminada={setCompraTerminada} initial="1"/>
+            <TerminarCompra clase={compraTerminada}/>
             </section>
         </div>
     )

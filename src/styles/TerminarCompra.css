@@ -1,5 +1,13 @@
+.escondido{
+    display: none;
+}
+.noEscondido{
+    display:flex;
+}
+
 .agregado{
-    border: 2px solid #5EB1BF;
+    border: 2px solid #50a7b6;
+    background-color: white;
     height: fit-content;
     border-radius: 10px;
     padding: 2rem;
@@ -18,7 +26,11 @@
 .agregado a:hover{
     cursor:pointer
 }
+.agregado button:hover{
+    cursor: pointer;    
+}
 .agregado button{
+    font-weight: bold;
     background-color: #042A2B;
     padding: 1rem;
     border: none;
