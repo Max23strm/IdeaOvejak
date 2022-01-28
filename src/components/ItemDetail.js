@@ -7,7 +7,7 @@ import Spinner from '../UI/Spinner';
 
 function ItemDetail({item}) {
     const {addItem}=CarritoConsumer();
-    const [compraTerminada, setCompraTerminada]= useState("escondido")
+    const [compraTerminada, setCompraTerminada]= useState(false)
     return (
         <div className="itemDetalles">
             <section className="galeriaContenedor">
@@ -33,8 +33,8 @@ function ItemDetail({item}) {
                 <p><span>Stock:</span> {item.stock}</p>
                 <p className="descripcion">{item.descripcion}</p>
             </section>
-            <ItemCount stock={item.stock} item={item} clase="detalle" onAdd={addItem} setCompraTerminada={setCompraTerminada} initial="1"/>
-            <TerminarCompra clase={compraTerminada}/>
+            <ItemCount stock={item.stock} item={item} clase={!compraTerminada?"detalle":"invisible"} onAdd={addItem} setCompraTerminada={setCompraTerminada} initial="1"/>
+            <TerminarCompra clase={compraTerminada?"noEscondido":"escondido"}/>
             </section>
         </div>
     )

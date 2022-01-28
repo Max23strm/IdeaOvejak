@@ -10,6 +10,7 @@ function CarritoProvider({children}) {
     const [carrito, setCarrito]= useState([])
     const [terminar, setTerminar]= useState("invisible"); 
     const [itemTemporal, setItemTemporal]=useState([])
+    const [mensajeError, setMensajeError]=useState(false)
 
     const mostrarComprado=()=>{
         setTerminar("visible")
@@ -86,14 +87,14 @@ function CarritoProvider({children}) {
     //FUNCION PARA AGREGAR UN ITEM
     const addOneItem=(item,itemId)=>{
         if(item.cantidad!==item.stock){
-        let cantidad=""
-        for(var i = 0; i < carrito.length; i++){
-            if (carrito[i].id===itemId){
-                cantidad=carrito[i].cantidad
-                cantidad++
-                //carrito.splice(i,1)
-                //setCarrito([item,...carrito])
+            let cantidad=""
+            for(var i = 0; i < carrito.length; i++){
+                if (carrito[i].id===itemId){
+                    cantidad=carrito[i].cantidad
+                    cantidad++
             }
+        } if  (item.cantidad>item.stock) {
+            setMensajeError(true)
         }
         let arr = carrito.filter(cosa => cosa !== item)
         item["cantidad"]=cantidad
@@ -126,6 +127,7 @@ function CarritoProvider({children}) {
             isInCart,
             addOneItem,
             terminar,
+            mensajeError,
             itemTemporal,
             setItemTemporal
             }}>

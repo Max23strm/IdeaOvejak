@@ -19,7 +19,7 @@ function Catalogo({data}) {
         mostrando.push(camiseta):null))
         :null)
         filtrar();
-    
+    console.log(mostrando)
     return (
         <section className='mainCatalogo'>
             <section className='bannerContenedor'>
